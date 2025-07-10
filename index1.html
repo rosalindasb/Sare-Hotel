@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Hotel Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" integrity="sha512-UTNP5BXLIptsaj5WdKFrkFov94lDx+eBvbKyoe1YAfjeRPC+gT5kyZ10kOHCfNZqEui1sxmqvodNUx3KbuYI/A==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+      function checkLogin(event) {
+          // Check if the user is logged in
+          const isLoggedIn = false; // Replace this with your actual login check
+  
+          if (!isLoggedIn) {
+              event.preventDefault(); // Prevent the default link behavior
+              alert('Please log in first.');
+              window.location.href = 'loginregist.html'; // Redirect to login page
+          }
+      }
+  </script>
+  
+  </head>
+  
+  <body style="background-color: #EFE9E1;">
+  
+    <header class="header" id="navigation-menu">
+      <div class="container">
+        <nav>
+          <a href="index1.html" class="logo"> <img src="image/logo5-removebg-preview.png" alt=""> </a>
+  
+          <ul class="nav-menu">
+            <li> <a href="index1.html" class="nav-link">Home</a> </li>
+            <li> <a href="#about" class="nav-link">About</a> </li>
+            <li> <a href="#rooms" class="nav-link">Rooms</a> </li>
+            <li> <a href="#restaurant" class="nav-link">Restaurant</a> </li>
+            <li> <a href="#gallary" class="nav-link">Gallery</a> </li>
+            <li> <a href="book-now.html" class="nav-link" onclick="checkLogin(event)">Books</a></li>
+            <li> <a href="login.php" class="nav-link">Login</a> </li>
+          </ul>
+  
+          <div class="hambuger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </nav>
+      </div>
+    </header>
+  <script>
+    const hambuger = document.querySelector('.hambuger');
+    const navMenu = document.querySelector('.nav-menu');
+
+    hambuger.addEventListener("click", mobileMenu);
+
+    function mobileMenu() {
+      hambuger.classList.toggle("active");
+      navMenu.classList.toggle("active");
+    }
+
+    const navLink = document.querySelectorAll('.nav-link');
+    navLink.forEach((n) => n.addEventListener("click", closeMenu));
+
+    function closeMenu() {
+      hambuger.classList.remove("active");
+      navMenu.classList.remove("active");
+    }
+  </script>
+
+  <section class="home" id="home">
+    <div class="head_container">
+      <div class="box">
+        <div class="text">
+          <h1>Hallo, Welcome to Sare Hotel!</h1>
+          <p>Tempat kenyamanan dan keindahan bersatu. <br> Nikmati pemandangan pantai yang memukau, <br> layanan terbaik, dan suasana yang menenangkan. <br> Jadikan setiap momen di sini tak terlupakan. </p>
+          <br>
+          <br>
+          <br>
+          <br>
+        </div>
+      </div>
+      <div class="image">
+        <img src="image/home4.jpg" class="slide">
+      </div>
+      <div class="image_item">
+        <img src="image/home4.jpg" alt="" class="slide active" onclick="img('image/home4.jpg')">
+        <img src="https://i.pinimg.com/736x/37/25/ab/3725abe4d92eef8cbeddc743683ae46f.jpg" alt="" class="slide" onclick="img('https://i.pinimg.com/736x/37/25/ab/3725abe4d92eef8cbeddc743683ae46f.jpg')">
+        <img src="image/home1.jpg" alt="" class="slide" onclick="img('image/home1.jpg')">
+        <img src="https://i.pinimg.com/736x/b8/a6/ef/b8a6ef0bf6ba45e6487995956a27cbec.jpg" alt="" class="slide" onclick="img('https://i.pinimg.com/736x/b8/a6/ef/b8a6ef0bf6ba45e6487995956a27cbec.jpg')">
+      </div>
+    </div>
+  </section>
+  <script>
+    function img(anything) {
+      document.querySelector('.slide').src = anything;
+    }
+
+    function change(change) {
+      const line = document.querySelector('.image');
+      line.style.background = change;
+    }
+  </script>
+  
+  <section class="about top" id="about">
+    <div class="container flex">
+      <div class="left">
+        <div class="img">
+          <img src="image/a1.jpg" alt="" class="image1">
+          <img src="image/a2.jpg" alt="" class="image2">
+        </div>
+      </div>
+      <div class="right">
+        <div class="heading">
+          <h5>RAISING COMFOMRT TO THE HIGHEST LEVEL</h5>
+          <h2>About Saré Hotel</h2>
+          <p>Terletak di pesisir pantai Italia yang memukau, Saré Hotel menawarkan pengalaman tak tertandingi di mana kemewahan bertemu dengan ketenangan. Dengan pemandangan laut biru yang mempesona, hotel kami dirancang untuk menghadirkan kenyamanan, keanggunan, dan momen tak terlupakan.</p>
+          <p>Baik Anda mencari liburan romantis, perjalanan keluarga, atau pelarian dari rutinitas, Saré Hotel menjanjikan setiap momen menjadi luar biasa. Temukan keindahan pesisir Italia dan biarkan kami mendefinisikan ulang arti relaksasi untuk Anda.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="wrapper top">
+    <div class="container">
+      <div class="text">
+        <h2>Our Amenities</h2>
+        <p>Nikmati pengalaman menginap yang luar biasa dengan layanan eksklusif yang dirancang untuk memenuhi setiap kebutuhan Anda. Kami memastikan kenyamanan dan relaksasi Anda dengan berbagai pilihan aktivitas yang menyenangkan, serta penawaran yang akan membuat liburan atau perjalanan bisnis Anda semakin berkesan. </p>
+
+        <div class="content">
+          <div class="box flex">
+            <i class="fas fa-swimming-pool"></i>
+            <span>Swimming pool</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-dumbbell"></i>
+            <span>Gym & Yoga</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-spa"></i>
+            <span>Spa & Massage</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-ship"></i>
+            <span>Boat Tours</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-microphone"></i>
+            <span>Conference room</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-umbrella-beach"></i>
+            <span>Private Beach</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-child"></i> <!-- Corrected icon -->
+            <span>Kids Club</span>
+          </div>
+          <div class="box flex">
+            <i class="fas fa-praying-hands"></i> <!-- Added prayer room icon -->
+            <span>Prayer Room</span>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>  
+  </section>
+  <section class="room top" id="rooms">
+    <div class="container">
+      <div class="heading_top flex1">
+        <div class="heading">
+          <h5>RAISING COMFORT TO THE HIGHEST LEVEL</h5>
+          <h2>Rooms & Suites</h2>
+        </div>
+        <div class="room button">
+          <button id="viewAll" class="btn1">VIEW ALL</button>
+        </div>
+      </div>
+
+      <div class="content grid" id="roomList">
+        <div class="box">
+          <div class="img">
+            <img src="https://i.pinimg.com/736x/31/a4/c8/31a4c84cfeac7a95445ca5fed9afc0e9.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>DELUXE ROOM</h3>
+            <p><span>Rp</span> 500.000 <span>/per malam</span></p>
+            <div class="button">
+              <button id="Deskripsi1" class="btn1">Deskripsi</button>
+          </div>
+          <div class="room deskripsi" style="display: none;">
+            <p>
+              Nikmati kenyamanan yang sederhana namun elegan di Deluxe Room. Kamar ini menawarkan fasilitas yang dirancang untuk memastikan kenyamanan maksimal selama menginap.
+            </p>
+            <ul>
+              <li></li>
+              <li>Tempat tidur King-size atau Twin-size yang nyaman untuk tidur yang nyenyak.</li>
+              <li>Kamar mandi dengan shower yang menawarkan kenyamanan dan kesegaran.</li>
+              <li>TV UHD 43 inci untuk hiburan premium di dalam kamar.</li>
+              <li>Akses Wi-Fi cepat di seluruh area kamar.</li>
+              <li>Mini-bar yang tersedia untuk menikmati minuman atau makanan ringan kapan saja.</li>
+              <li>Sarapan untuk dua orang sudah termasuk untuk memulai hari Anda dengan segar.</li>
+            </ul>
+            <p>
+              Deluxe Room adalah pilihan sempurna untuk Anda yang menginginkan kenyamanan dan kemudahan dalam satu paket.
+            </p>
+             
+          </div>
+          <script>
+                  document.getElementById('Deskripsi1').addEventListener('click', function () {
+                  const description = this.closest('.button').nextElementSibling;
+                  description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                  this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+              });
+          </script>          
+          </div>
+        </div>
+          
+        
+        
+        <div class="box">
+          <div class="img">
+            <img src="https://i.pinimg.com/736x/58/2b/d9/582bd944813b349bdefddba9ef97c5e9.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3> DELUXE BALCONY </h3>
+            <p> <span>Rp</span> 850.000 <span>/per malam</span> </p>
+            <div class="button">
+              <button id="Deskripsi2" class="btn1">Deskripsi</button>
+          </div>
+          <div class="room deskripsi" style="display: none;">
+            <p>
+              Deluxe Balcony menawarkan kenyamanan lebih dengan balkon pribadi yang menghadap kolam renang, memberikan pemandangan yang menenangkan dan suasana yang santai.
+            </p>
+            <ul>
+              <li></li>
+              <li>Tempat tidur King-size atau Twin-size yang nyaman untuk tidur yang berkualitas.</li>
+              <li>Kamar mandi mewah dengan shower dan bathtub terpisah, memberikan kenyamanan lebih selama menginap.</li>
+              <li>TV UHD 55 inci untuk hiburan premium di kamar.</li>
+              <li>Mini-bar dan brankas laptop yang tersedia untuk kenyamanan dan keamanan Anda.</li>
+              <li>Akses gratis ke gym hotel untuk menjaga kebugaran selama liburan.</li>
+              <li>Sarapan untuk dua orang sudah termasuk, menjadikan pagi Anda lebih menyegarkan.</li>
+            </ul>
+            <p>
+              Deluxe Balcony adalah pilihan ideal untuk Anda yang mencari penginapan mewah dengan fasilitas lengkap dan kenyamanan luar biasa.
+            </p>
+             
+          </div>
+          <script>
+                  document.getElementById('Deskripsi2').addEventListener('click', function () {
+                  const description = this.closest('.button').nextElementSibling;
+                  description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                  this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+              });
+          </script>   
+          </div>
+        </div>
+
+        
+        <div class="box">
+          <div class="img">
+            <img src="https://i.pinimg.com/736x/0d/ec/3f/0dec3fd6b15b546cfa59e4023f8954e6.jpg" alt="">
+          </div>
+          <div class="text">
+            <h3>PREMIER ROOM</h3>
+            <p> <span>Rp</span> 1.200.000 <span>/per malam</span> </p>
+            <div class="button">
+              <button id="Deskripsi3" class="btn1">Deskripsi</button>
+          </div>
+          <div class="room deskripsi" style="display: none;">
+            <p>
+              Premier Room menawarkan lebih banyak ruang dan kenyamanan dengan fasilitas mewah untuk pengalaman menginap yang tak terlupakan.
+            </p>
+            <ul>
+              <li></li>
+              <li>Tempat tidur King-size atau Twin-size yang nyaman untuk tidur yang nyenyak.</li>
+              <li>Kamar mandi mewah dengan bathtub besar dan shower terpisah untuk kenyamanan maksimal.</li>
+              <li>TV UHD 55 inci untuk hiburan premium selama menginap.</li>
+              <li>Mini-bar yang dilengkapi dengan pilihan minuman berkualitas dan brankas laptop untuk keamanan barang berharga Anda.</li>
+              <li>Akses Wi-Fi cepat di seluruh kamar untuk kenyamanan Anda.</li>
+              <li>Sarapan untuk dua orang sudah termasuk, memberi Anda awal hari yang menyegarkan.</li>
+              <li>Akses gratis ke spa hotel (satu kali per hari), memungkinkan Anda untuk bersantai dengan pijat atau sauna.</li>
+            </ul>
+            <p>
+              Premier Room adalah pilihan tepat bagi Anda yang mencari ruang lebih luas dan fasilitas terbaik untuk pengalaman menginap yang santai dan penuh kemewahan.
+            </p>
+              
+          </div>
+          <script>
+                  document.getElementById('Deskripsi3').addEventListener('click', function () {
+                  const description = this.closest('.button').nextElementSibling;
+                  description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                  this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+              });
+          </script> 
+          </div>
+          </div>
+      </div>
+
+      <div id="extraRooms" style="display: none;">
+    <div class="content grid" id="roomList">
+      <div class="box">
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/1d/ee/61/1dee61b0fea66d15649a16d0ed8aa766.jpg" alt="">
+        </div>
+        <div class="text">
+          <h3>PREMIER BALCONY</h3>
+          <p><span>Rp</span> 1.800.000 <span>/per malam</span></p>
+          <div class="button">
+            <button id="Deskripsi4" class="btn1">Deskripsi</button>
+        </div>
+        <div class="room deskripsi" style="display: none;">
+          <p>
+            Premier Balcony memberikan pengalaman menginap yang lebih eksklusif dengan balkon pribadi yang menawarkan pemandangan indah.
+          </p>
+          <ul>
+            <li></li>
+            <li>Tempat tidur King-size atau Twin-size yang nyaman untuk tidur yang nyenyak.</li>
+            <li>Kamar mandi mewah dengan bathtub dan shower terpisah untuk kenyamanan maksimal.</li>
+            <li>TV UHD 55 inci untuk hiburan premium selama menginap.</li>
+            <li>Mini-bar yang dilengkapi dengan pilihan minuman berkualitas dan brankas laptop untuk keamanan barang berharga Anda.</li>
+            <li>Akses Wi-Fi cepat di seluruh kamar untuk kenyamanan Anda.</li>
+            <li>Sarapan untuk dua orang sudah termasuk untuk memulai hari Anda dengan menyegarkan.</li>
+            <li>Akses gratis ke gym hotel untuk menjaga kebugaran Anda selama menginap.</li>
+            <li>Relaksasi maksimal dengan akses ke spa hotel untuk pijat dan sauna.</li>
+          </ul>
+          <p>
+            Premier Balcony adalah pilihan sempurna untuk pengalaman menginap yang lebih mewah dengan pemandangan yang menakjubkan dan fasilitas eksklusif.
+          </p>
+            
+        </div>
+        <script>
+                document.getElementById('Deskripsi4').addEventListener('click', function () {
+                const description = this.closest('.button').nextElementSibling;
+                description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+            });
+        </script> 
+        </div>
+        </div>
+      
+      <div class="box">
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/fe/97/a5/fe97a5f79259b21c76510869c7ca8055.jpg" alt="">
+        </div>
+        <div class="text">
+          <h3>HILLSIDE STUDIO</h3>
+          <p> <span>Rp</span> 1.500.000 <span>/per malam</span> </p>
+          <div class="button">
+            <button id="Deskripsi5" class="btn1">Deskripsi</button>
+        </div>
+        <div class="room deskripsi" style="display: none;">
+          <p>
+            Hillside Studio menawarkan pemandangan alam yang menenangkan dengan jendela besar yang menghadap ke alam sekitar, menciptakan suasana yang damai dan menenangkan.
+          </p>
+          <ul>
+            <li></li>
+            <li>Tempat tidur King-size yang nyaman untuk tidur malam yang nyenyak.</li>
+            <li>Kamar mandi mewah dengan bathtub dan shower terpisah untuk kenyamanan maksimal.</li>
+            <li>TV UHD 55 inci untuk hiburan premium selama menginap.</li>
+            <li>Mini-bar yang dilengkapi dengan pilihan minuman berkualitas dan brankas laptop untuk keamanan barang berharga Anda.</li>
+            <li>Akses Wi-Fi cepat di seluruh kamar untuk kenyamanan Anda.</li>
+            <li>Sarapan untuk dua orang sudah termasuk untuk memulai hari Anda dengan menyegarkan.</li>
+            <li>Akses gratis ke area yoga dan relaksasi hotel, yang dirancang untuk membantu Anda meremajakan tubuh dan pikiran.</li>
+          </ul>
+          <p>
+            Hillside Studio adalah pilihan sempurna untuk Anda yang mencari ketenangan dengan fasilitas premium yang mendukung relaksasi dan kenyamanan.
+          </p>
+          
+        </div>
+        <script>
+                document.getElementById('Deskripsi5').addEventListener('click', function () {
+                const description = this.closest('.button').nextElementSibling;
+                description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+            });
+        </script> 
+        </div>
+      </div>
+
+      
+      <div class="box">
+        <div class="img">
+          <img src="https://i.pinimg.com/736x/ea/59/e0/ea59e0f560586ace2d59e99920e462b0.jpg" alt="">
+        </div>
+        <div class="text">
+          <h3>GALLERY SUITE</h3>
+          <p> <span>Rp</span> 2.000.000 <span>/per malam</span> </p>
+          <div class="button">
+            <button id="Deskripsi6" class="btn1">Deskripsi</button>
+        </div>
+        <div class="room deskripsi" style="display: none;">
+          <p>
+            Gallery Suite menghadirkan kenyamanan maksimal dengan ruang tamu terpisah dan fasilitas mewah, menawarkan pengalaman menginap yang tak terlupakan.
+          </p>
+          <ul>
+            <li></li>
+            <li>Tempat tidur King-size yang nyaman, menjamin tidur yang nyenyak selama menginap.</li>
+            <li>Kamar mandi mewah dengan bathtub besar dan shower terpisah untuk kenyamanan pribadi yang maksimal.</li>
+            <li>TV UHD 55 inci untuk hiburan premium selama waktu senggang.</li>
+            <li>Mini-bar yang dilengkapi dengan pilihan minuman berkualitas dan brankas laptop untuk keamanan barang berharga Anda.</li>
+            <li>Akses Wi-Fi cepat di seluruh kamar untuk mendukung aktivitas online Anda dengan lancar.</li>
+            <li>Sarapan untuk dua orang sudah termasuk, memastikan Anda memulai hari dengan energi yang penuh.</li>
+            <li>Layanan spa dalam kamar sekali selama menginap untuk pengalaman relaksasi ekstra.</li>
+          </ul>
+          <p>
+            Gallery Suite menawarkan kenyamanan dan relaksasi lebih maksimal, menjadikannya pilihan ideal untuk penginapan mewah yang tak terlupakan.
+          </p>
+           
+        </div>
+        <script>
+                document.getElementById('Deskripsi6').addEventListener('click', function () {
+                const description = this.closest('.button').nextElementSibling;
+                description.style.display = description.style.display === 'none' ? 'block' : 'none';
+                this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+            });
+        </script> 
+      </div>
+    </div>
+
+    <div class="box">
+      <div class="img">
+        <img src="https://i.pinimg.com/736x/04/04/10/0404100e914a191178ce94cdaa60d722.jpg" alt="">
+      </div>
+      <div class="text">
+        <h3>PREMIER SUITE</h3>
+        <p> <span>Rp</span>  2.500.000 <span>/per malam</span> </p>
+        <div class="button">
+          <button id="Deskripsi7" class="btn1">Deskripsi</button>
+      </div>
+      <div class="room deskripsi" style="display: none;">
+        <p>
+          Premier Suite menawarkan ruang yang lebih luas dan fasilitas premium untuk pengalaman menginap yang luar biasa, dirancang untuk kenyamanan dan kemewahan.
+        </p>
+        <ul>
+          <li></li>
+          <li>Tempat tidur King-size yang besar, memberikan kenyamanan maksimal selama istirahat malam Anda.</li>
+          <li>Kamar mandi mewah dengan bathtub besar dan shower terpisah, memastikan pengalaman mandi yang menyegarkan.</li>
+          <li>TV UHD 65 inci untuk hiburan terbaik di kamar, memberikan pengalaman menonton yang lebih jelas dan tajam.</li>
+          <li>Mini-bar lengkap dengan pilihan minuman berkualitas untuk dinikmati kapan saja.</li>
+          <li>Brankas laptop dan akses Wi-Fi cepat untuk memastikan keamanan dan kenyamanan Anda selama menginap.</li>
+          <li>Sarapan untuk dua orang sudah termasuk, memberi Anda awal hari yang menyegarkan.</li>
+          <li>Akses gratis ke fasilitas olahraga air seperti paddleboard dan kayak, menambah pengalaman liburan Anda yang aktif dan menyenangkan.</li>
+        </ul>
+        <p>
+          Premier Suite memberikan kenyamanan luar biasa dengan fasilitas premium dan aktivitas menarik yang membuat setiap momen menginap Anda lebih istimewa.
+        </p>
+          
+      </div>
+      <script>
+              document.getElementById('Deskripsi7').addEventListener('click', function () {
+              const description = this.closest('.button').nextElementSibling;
+              description.style.display = description.style.display === 'none' ? 'block' : 'none';
+              this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+          });
+      </script> 
+    </div>
+  </div>
+
+  <div class="box">
+    <div class="img">
+      <img src="https://i.pinimg.com/736x/81/36/08/8136087a951799ae60bfc4eb23c72bc2.jpg" alt="">
+    </div>
+    <div class="text">
+      <h3>FAMILLY SUITE</h3>
+      <p> <span>Rp</span> 3.000.000 <span>/per malam</span> </p>
+      <div class="button">
+        <button id="Deskripsi8" class="btn1">Deskripsi</button>
+    </div>
+    <div class="room deskripsi" style="display: none;">
+      <p>
+        Family Suite adalah pilihan ideal untuk penginapan keluarga, memberikan kenyamanan dan kemewahan dalam satu paket.
+      </p>
+      <ul>
+        <li></li>
+        <li>Dua kamar tidur terpisah, satu dengan tempat tidur King-size dan satu lagi dengan Twin-size, memberikan kenyamanan ekstra bagi keluarga.</li>
+        <li>Kamar mandi dilengkapi dengan bathtub dan shower terpisah, memungkinkan pengalaman mandi yang menyegarkan dan nyaman.</li>
+        <li>Fasilitas premium seperti TV UHD 55 inci di setiap kamar untuk hiburan maksimal.</li>
+        <li>Ruang tamu luas yang cocok untuk bersantai bersama keluarga, menciptakan momen kebersamaan yang tak terlupakan.</li>
+        <li>Balkon pribadi dengan pemandangan yang menyegarkan untuk menikmati udara segar dan pemandangan sekitar.</li>
+        <li>Sarapan untuk empat orang sudah termasuk, memberikan kenyamanan tambahan untuk memulai hari Anda.</li>
+        <li>Akses gratis ke kids club dan berbagai aktivitas keluarga yang menyenangkan dan edukatif di hotel.</li>
+      </ul>
+      <p>
+        Family Suite adalah pilihan sempurna untuk keluarga yang mencari kenyamanan, fasilitas lengkap, dan pengalaman menginap yang menyenankan bersama orang-orang tercinta.
+      </p>      
+    </div>
+    <script>
+            document.getElementById('Deskripsi8').addEventListener('click', function () {
+            const description = this.closest('.button').nextElementSibling;
+            description.style.display = description.style.display === 'none' ? 'block' : 'none';
+            this.textContent = description.style.display === 'none' ? 'Deskripsi' : 'Tutup Deskripsi';
+        });
+    </script> 
+  </div>
+</div>
+
+  </section>
+  <script>
+    document.getElementById('viewAll').addEventListener('click', function () {
+    const additionalRooms = document.getElementById('extraRooms');
+    const viewButton = document.getElementById('viewAll');
+    
+    if (additionalRooms.style.display === 'none') {
+      additionalRooms.style.display = 'grid';  
+      viewButton.textContent = 'VIEW ALL';    
+    } else {
+      additionalRooms.style.display = 'none'; 
+      viewButton.textContent = 'VIEW ALL';     
+    }
+    });
+    </script>
+  
+  <!-- percobaan testi -->
+
+  <div class="testimonial-section">
+    <div class="heading">
+      <h5>AT THE HEART OF COMMUNICATION</h5>
+      <h2>People Say</h2>
+    </div>
+    <div class="testimonials-container">
+      <div class="nav-arrow left" onclick="prevSlide()">&#9664;</div>
+      <div class="testimonials-wrapper">
+        <div class="testimonialss" id="testimonialss">
+          <div class="testimonials active">
+            <div class="testimonial">
+                <img src="image/guest1.jpg" alt="">
+                <h3>Mark Lee</h3>
+                <p>"Amazing experience! The service was excellent. I definitely comeback!"</p>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="image/guest2.jpg" alt="Guest 2">
+                <h3>Tom Holland</h3>
+                <p>"The rooms were clean and the staff was friendly. Highly recommend!"</p>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+            </div>
+            <div class="testimonial">
+                <img src="image/guest3.jpg" alt="Guest 3">
+                <h3>Jaehyun</h3>
+                <p>"I loved the modern design of the hotel. Everything was well-maintained and organized."</p>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+            </div>
+          </div>
+          <div class="testimonials">
+            <div class="testimonial">
+                <img src="image/guest4.jpg" alt="Guest 4">
+                <h3>Taylor Swift</h3>
+                <p>"A perfect stay for my family vacation. We couldn’t have asked for a better experience!"</p>
+                <div class="rating">
+                    <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+                </div>
+            </div>
+            <div class="testimonial">
+              <img src="image/guest5.jpg" alt="Guest 5">
+              <h3>Sunghoon</h3>
+              <p>"The staff went above to make our stay enjoyable. Highly recommend!"</p>
+              <div class="rating">
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <div class="testimonial">
+              <img src="image/guest6.jpg" alt="Guest 6">
+              <h3>Louis Partridge</h3>
+              <p>"The ambiance was fantastic, and the food was exceptional. Would love to visit again."</p>
+              <div class="rating">
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials">
+            <div class="testimonial">
+              <img src="image/guest7.jpg" alt="Guest 7">
+              <h3>Karina</h3>
+              <p>"The room was spacious and clean, and the location was perfect for sightseeing."</p>
+              <div class="rating">
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+            <div class="testimonial">
+              <img src="image/guest8.jpg" alt="Guest 8">
+              <h3>Sabrina Carpenter</h3>
+              <p>"The view from our room was breathtaking. I woke up to the most beautiful sunrise every day!"</p>
+              <div class="rating">
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9734;</span>
+              </div>
+            </div>
+            <div class="testimonial">
+              <img src="image/guest9.jpg" alt="Guest 9">
+              <h3>Robert Downey</h3>
+              <p>"Exceptional service and friendly staff! Made my family trip truly memorable."</p>
+              <div class="rating">
+                  <span>&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <div class="nav-arrow right" onclick="nextSlide()">&#9654;</div>
+</div>
+<div class="dots">
+  <span class="dot active" onclick="goToSlide(0)"></span>
+  <span class="dot" onclick="goToSlide(1)"></span>
+  <span class="dot" onclick="goToSlide(2)"></span>
+</div>
+</div>
+
+<script src="script.js"></script>
+
+
+<section class="restaurant top" id="restaurant">
+  <div class="container flex">
+    <div class="left">
+      <img src="image/re.jpg" alt="">
+    </div>
+    <div class="right">
+      <div class="text">
+        <h2>Our Restaurant</h2>
+        <p>Restoran kami menawarkan berbagai macam menu dari berbagai negara, memberikan pengalaman kuliner internasional yang lengkap dan memuaskan.</p>
+      </div>
+      <div class="accordionWrapper">
+        <div class="accordionItem open">
+          <h2 class="accordionIHeading">Italian Kitchen</h2>
+          <div class="accordionItemContent">
+            <p>Menyajikan hidangan Italia otentik, seperti pasta bolognese, spaghetti carbonara, pizza margherita, dan risotto alla milanese. 
+            </p>
+          </div>
+        </div>
+        <div class="accordionItem close">
+          <h2 class="accordionIHeading">Japanese Kitchen</h2>
+          <div class="accordionItemContent">
+            <p>Menyajikan hidangan khas Jepang yang autentik, seperti sushi dengan berbagai pilihan ikan segar, ramen dengan kaldu kaya rasa, dan tempura dengan bahan-bahan yang digoreng renyah.
+            </p>
+          </div>
+        </div>
+        <div class="accordionItem close">
+          <h2 class="accordionIHeading">Sundanese Kitchen</h2>
+          <div class="accordionItemContent">
+            <p>Menyajikan hidangan khas Sunda yang autentik, seperti nasi liwet gurih, ayam goreng kremes renyah, dan sate maranggi dengan bumbu rempah khas.
+            </p>
+          </div>
+        </div>
+        <div class="accordionItem close">
+          <h2 class="accordionIHeading">Javanese Kitchen</h2>
+          <div class="accordionItemContent">
+            <p>Menyajikan hidangan khas Jawa yang kaya rasa dan berbumbu khas, seperti nasi gudeg dengan nangka muda yang dimasak manis, sate ayam dengan bumbu kacang khas, dan ayam penyet dengan sambal terasi pedas. 
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  <script>
+    var accItem = document.getElementsByClassName('accordionItem');
+    var accHD = document.getElementsByClassName('accordionIHeading');
+
+    for (i = 0; i < accHD.length; i++) {
+      accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+      var itemClass = this.parentNode.className;
+      for (var i = 0; i < accItem.length; i++) {
+        accItem[i].className = 'accordionItem close';
+      }
+      if (itemClass == 'accordionItem close') {
+        this.parentNode.className = 'accordionItem open';
+      }
+    }
+  </script>
+
+
+
+<section class="gallary mtop " id="gallary">
+  <div class="container">
+    <div class="heading_top flex1">
+      <div class="heading">
+        <h5>WELCOME TO OUR PHOTO GALLERY</h5>
+        <h2>Photo Gallery of Our Hotel</h2>
+      </div>
+      <div class="button">
+        <a href="galery.html">
+          <button class="btn1">VIEW GALLERY</button>
+        </a>
+      </div>
+    </div>
+
+    <div class="owl-carousel owl-theme">
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/58/2b/d9/582bd944813b349bdefddba9ef97c5e9.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/64/89/ee/6489ee14543a9895e4bba22a99608209.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/1d/ee/61/1dee61b0fea66d15649a16d0ed8aa766.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="https://images.pexels.com/photos/2899687/pexels-photo-2899687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/73/67/01/7367015f1676ad7a1a605e3d899e1593.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/73/ef/d8/73efd8818aa63f8fe61dbd744b9a265e.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/e8/6e/11/e86e11d997d054dfaf2b46aed888af95.jpg" alt="">
+      </div>
+      <div class="item">
+        <img src="https://i.pinimg.com/736x/4b/22/a0/4b22a0fb18294a278cd565e5cd0d02f3.jpg" alt="">
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.js" integrity="sha512-gY25nC63ddE0LcLPhxUJGFxa2GoIyA5FLym4UJqHDEMHjp8RET6Zn/SHo1sltt3WuVtqfyxECP38/daUc/WVEA==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous"
+    referrerpolicy="no-referrer"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      loop: true,
+      margin: 10,
+      nav: true,
+      dots: false,
+      navText: ["<i class='fas fa-chevron-left'></i>", "<i class='fas fa-chevron-right'></i>"],
+      responsive: {
+        0: {
+          items: 1
+        },
+        768: {
+          items: 2
+        },
+        1000: {
+          items: 4
+        }
+      }
+    })
+  </script>
+
+
+
+  <section class="map top">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14131.036667732067!2d85.32395955!3d27.69383745!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2snp!4v1637755481449!5m2!1sen!2snp" width="600" height="450" style="border:0;"
+      allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+  
+  <footer>
+    <div class="footer-container">
+      <!-- Bagian Alamat -->
+      <div class="address">
+        <h3>Saré Hotel</h3>
+        <p>Jalan Margonda Raya No. 100,<br>Depok, Jawa Barat 16424,<br>Indonesia</p>
+        <p>Email: <a href="mailto:Sarehotel@gmail.com">Sarehotel@gmail.com</a></p>
+        <p>Phone: 123 456 7898</p>
+      </div>
+  
+      <!-- Bagian Media Sosial -->
+      <div class="social-icons">
+        <h3>Follow Us</h3>
+        <a href="#"><img src="https://i.pinimg.com/736x/69/f2/49/69f249297f410eaf1b58d31593ba83f1.jpg" alt="Facebook"></a>
+        <a href="#"><img src="https://i.pinimg.com/736x/44/08/45/440845a92bf385d876ed6ae4217e6c90.jpg" alt="Instagram"></a>
+        <a href="#"><img src="https://i.pinimg.com/736x/1f/ce/b6/1fceb68799bfc04e1c1c7c5123fa064b.jpg" alt="Twitter"></a>
+        <a href="#"><img src="https://i.pinimg.com/736x/77/ab/e3/77abe355e66aa534337fd2171e1c223c.jpg" alt="YouTube"></a>
+      </div>
+  
+      <!-- Bagian Metode Pembayaran -->
+      <div class="payment-methods">
+        <h3>Metode Pembayaran</h3>
+        <img src="https://i.pinimg.com/736x/26/b3/4a/26b34ac4c3890d30ebc7a7ba9a829999.jpg" alt="Payment Methods">
+        <img src="https://i.pinimg.com/736x/8c/14/00/8c14002029a523a0cbaf65dd59306a43.jpg" alt="Payment Methods">
+        <img src="https://i.pinimg.com/736x/d0/35/3a/d0353ab7920ac25d766512bd6e37b392.jpg" alt="Payment Methods">
+        <img src="https://i.pinimg.com/736x/02/8b/92/028b92bb43a9f6c80e26c3ea403cb698.jpg" alt="Payment Methods">
+        <img src="https://fahum.umsu.ac.id/blog/wp-content/uploads/2024/12/cara-top-up-saldo-shopeepay-melalui-indomaret-dan-alfamart.webp" alt="Payment Methods">
+        <img src="https://i.pinimg.com/736x/cb/aa/03/cbaa0388892e0a154353c2a1cb8b3fee.jpg" alt="Payment Methods">
+      </div>
+    </div>
+    <div class="copy">
+      <p class="pg"style=" color: #EFE9E1;">©2024 PT Sare Indonesia . All rights reserved</p>
+    </div>
+  </footer>
+  
+  
+  <script>
+    document.querySelector('.nav-link[href="index1.html"]').addEventListener('click', function(event) {
+      event.preventDefault(); // Mencegah navigasi ulang halaman
+      window.scrollTo({ top: 0, behavior: 'smooth' }); // Scroll ke atas halaman dengan halus
+    });
+  </script>
+</body>
+
+</html>
